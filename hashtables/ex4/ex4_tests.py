@@ -7,12 +7,15 @@ class TestEx4(unittest.TestCase):
 
     def test_small(self):
         result = has_negatives([1,2,3])
+        print('result1: ', result)
         self.assertTrue(result == [])
 
         result = has_negatives([1,2,3,-4])
+        print('result2: ', result)
         self.assertTrue(result == [])
 
         result = has_negatives([-1,-2,1,2,3,4,-4])
+        print('result3: ', result)
         result.sort()
         self.assertTrue(result == [1,2,4])
 
